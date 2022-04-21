@@ -1,0 +1,213 @@
+body {
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    margin-left: 0%;
+}
+
+.stop1 {
+    stop-color: #000000;  
+ }
+ 
+ 
+ 
+ .stop3 {
+    stop-color: #000000;  
+ }
+
+ .stop11 {
+   stop-color: #000000;  
+}
+
+.stop22 {
+   stop-color: #f3ef0f;  
+}
+
+.stop33 {
+   stop-color: #000000;  
+}
+
+#canvas {
+   position: absolute;
+   top: 0;
+   left: 0;
+   animation-delay: 0s;
+   animation-duration: 5s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   animation-name: liikuta;   
+}
+
+#canvas1 {
+   position: absolute;
+   top: 0;
+   right: 0;
+   animation-delay: 0s;
+   animation-duration: 5s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   animation-name: liikuta1;
+}
+
+#canvas2 {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   animation-delay: 0s;
+   animation-duration: 5s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   animation-name: liikuta2;
+}
+
+#canvas3 {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   animation-delay: 0s;
+   animation-duration: 5s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   animation-name: liikuta3;
+}
+
+#canvas4 {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   margin-left: -150px;
+   text-align: center;
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+   animation-delay: 0s;
+   animation-duration: 5s;
+   animation-iteration-count: infinite;
+   animation-name: scrolleri;
+   animation-timing-function: linear;
+}
+
+@keyframes scrolleri {
+   0% {
+      transform: translate(50vw, 20vh);
+  }
+  100% {
+      transform: translate(50vw, -200vh);
+  }   
+}
+
+@keyframes liikuta {
+   from {
+      transform: translate(0,0);
+   }
+   to {
+      transform: translate(calc(50vw - 282px), calc(50vh - 276px));
+   }
+}
+
+@keyframes liikuta1 {
+   from {
+      transform: translate(0,0);
+   }
+   to {
+      transform: translate(calc(-50vw + 282px), calc(50vh - 276px));
+   }
+}
+
+@keyframes liikuta2 {
+   from {
+      transform: translate(0,0);
+   }
+   to {
+      transform: translate(calc(-50vw + 282px), calc(-50vh + 276px));
+   }
+}
+
+@keyframes liikuta3 {
+   from {
+      transform: translate(0,0);
+   }
+   to {
+      transform: translate(calc(50vw - 282px), calc(-50vh + 276px));
+   }
+}
+
+ #pingu0 {
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   animation-name: slide;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   z-index:-1;
+ }
+
+ @keyframes slide {
+   from {
+      transform: translate(0,0);
+   }
+   50% {
+      transform: translate(calc(50vw - 75px), calc(-100vh + 150px));
+   }
+   to  {
+         transform: translate(calc(100vw - 150px), 0);
+      }
+   }
+
+   #pingu1 {
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-name: liiku;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+   
+    @keyframes liiku {
+      from {
+         transform: translate(0,0);
+      }
+      50% {
+         transform: translate(calc(-50vw + 75px), calc(100vh - 150px));
+      }
+      to  {
+            transform: translate(calc(-100vw + 150px), 0vh);
+         }
+      }
+
+
+
+ #alue { 
+   /* säädetään alueelle koko ja varmistetaan, että mahdollinen liian
+   suuri sisältö piilotetaan ylimenevältä osalta */
+     max-width: 100%;
+     max-height: 100%;
+     overflow: hidden;
+   }
+
+
+     .palkit {
+       animation-name: moveslide;
+        animation-direction: alternate;
+        position: absolute;
+        height: 100%;
+        z-index: 0;
+ }
+
+
+
+   @keyframes moveslide {
+         
+      from {
+             transform: translateX(0);
+             animation-timing-function: ease-in-out;
+      }
+      to  {
+            transform: translateX(110%);
+      }
+   }
+
